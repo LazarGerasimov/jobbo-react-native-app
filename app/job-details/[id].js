@@ -16,7 +16,7 @@ const JobDetails = () => {
         job_id: params.id
     });
 
-    cosnt[refreshing, setRefreshing] = useState(false);
+    const [refreshing, setRefreshing] = useState(false);
 
     const onRefresh = () => {
 
