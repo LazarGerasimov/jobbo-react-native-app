@@ -3,6 +3,8 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import styles from "./nearbyjobcard.style";
 import { checkImageUrl } from '../../../../utils';
 
+const default_logo_image = require('../../../../assets/default_job_logo.png');
+
 const NearbyJobCard = ({ job, handleNavigate }) => {
   return (
     <TouchableOpacity style={styles.container} onPress={handleNavigate}>
@@ -11,7 +13,7 @@ const NearbyJobCard = ({ job, handleNavigate }) => {
           source={{
             uri: checkImageUrl(job.employer_logo)
               ? job.employer_logo
-              : "../../../../assets/default_job_logo.png",
+              : "https://e7.pngegg.com/pngimages/97/170/png-clipart-job-hunting-employment-agency-career-others-miscellaneous-logo.png",
           }}
           resizeMode='contain'
           style={styles.logImage}

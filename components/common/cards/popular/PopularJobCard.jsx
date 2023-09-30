@@ -15,7 +15,7 @@ const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
           source={{
             uri: checkImageUrl(item.employer_logo)
               ? item.employer_logo
-              : "../../../../assets/default_job_logo.png"
+              : "https://e7.pngegg.com/pngimages/97/170/png-clipart-job-hunting-employment-agency-career-others-miscellaneous-logo.png"
           }}
           resizeMode='contain'
           style={styles.logoImage}
