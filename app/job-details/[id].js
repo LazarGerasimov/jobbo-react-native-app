@@ -20,9 +20,11 @@ const JobDetails = () => {
     const [refreshing, setRefreshing] = useState(false);
     const [activeTab, setActiveTab] = useState(tabs[0]);
 
-    const onRefresh = () => {
-
-    }
+    const onRefresh = useCallback(() => { // fixing ocassional render bugs when opening too many jobs in a short period of time
+        setRefreshing(true);
+        refetch();
+        setRefreshing(false);
+    }, [])
 
     const displayTabContent = () => {
         switch (activeTab) {
